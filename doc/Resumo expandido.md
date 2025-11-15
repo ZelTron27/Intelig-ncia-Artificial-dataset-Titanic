@@ -31,10 +31,11 @@ A divisão dos dados foi realizada utilizando train_test_split (70% treino, 30% 
 Comparação com os Modelos de Referência (XGBoost, SVM, Random Forest)
 Os resultados de desempenho no conjunto de teste, ordenados pelo Test ROC-AUC, foram:
 
-Modelo	Best CV ROC-AUC	Train ROC-AUC	Test ROC-AUC	Test Accuracy	Test F1	Fit Time (s)
-RandomForest	0.8697	0.9397	0.8653	0.8172	0.7322	87.96
-XGBoost	0.8685	0.9346	0.8563	0.8134	0.7222	11.14
-SVC	0.8567	0.8997	0.8409	0.8060	0.7292	13.00
+| Modelo	  | Best CV ROC-AUC | Train ROC-AUC  | Test ROC-AUC |  Test Accuracy  | Test F1 |  Fit Time (s)  |
+| ------------- | ------------- | ------------- | ------------- | -------------  | ------------- | -------------  | 
+| RandomForest  | 0.8697  |  0.9397	  | 0.8653  | 0.8172  | 0.7322   | 87.96   |
+| XGBoost   | 0.8685  | 0.9346  | 0.8563	 | 0.8134  | 0.7222   | 11.14   |                                        
+| SVC   | 0.8567  | 0.8997 | 0.8409  | 0.8060  | 0.7292   | 13.00   |
 
 # 4. Análise da Importância dos Atributos
 Para os modelos baseados em árvore (Random Forest e XGBoost), a análise da importância das features (através de feature_importances_) revelou que as variáveis relacionadas ao sexo (sex_male, sex_female), à classe do passageiro (pclass_1, pclass_3) e à tarifa (fare) foram consistentemente as mais influentes na previsão de sobrevivência. A idade (age) também demonstrou um papel significativo. Esta análise sugere que fatores socioeconômicos e de gênero tiveram um peso considerável no desfecho da sobrevivência no Titanic.
@@ -50,3 +51,4 @@ Com base na comparação, o XGBoost é justificado como o melhor modelo para est
 O projeto demonstrou um processo completo de modelagem de classificação supervisionada no dataset Titanic. Através do pré-processamento cuidadoso, otimização de hiperparâmetros e avaliação rigorosa, foi possível identificar o XGBoost como o modelo mais eficiente e com melhor custo-benefício. A análise de importância de atributos corroborou que sexo, classe e tarifa foram determinantes para a previsão de sobrevivência. Os desafios incluíram o manejo de valores ausentes e o ajuste fino para mitigar o overfitting. Os resultados fornecem uma base sólida para futuras investigações, como a exploração de técnicas de ensemble mais avançadas ou o desenvolvimento de atributos mais complexos.
 
  ***Dataset Titanic (disponível via seaborn ou Kaggle).***
+
