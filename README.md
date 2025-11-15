@@ -35,11 +35,3 @@ Melhor Desempenho Preditivo: O RandomForest obteve o maior ROC-AUC no conjunto d
 Eficiência Computacional: O XGBoost se destacou pelo seu tempo de treinamento significativamente menor (apenas 11.14 segundos), tornando-o uma escolha muito eficiente quando o tempo é um fator crítico.
 Overfitting: Todos os modelos apresentaram um train_roc_auc maior que o test_roc_auc, sugerindo um leve overfitting. O Random Forest mostrou a maior diferença, mas em um nível aceitável para generalização. O SVC teve a menor diferença, mas com um desempenho de teste um pouco inferior.
 
-# 5. Representação Visual:
-As curvas ROC, Precision-Recall e as matrizes de confusão foram geradas para cada modelo, permitindo uma análise visual mais aprofundada do desempenho, especialmente para entender o balanço entre True Positives, False Positives, True Negatives e False Negatives. Por exemplo, as curvas ROC visualizam a capacidade de cada modelo de separar as classes em diferentes thresholds de probabilidade, e as matrizes de confusão mostram os erros e acertos em termos absolutos.
-
-Discussão Geral (conforme seu notebook):
-Melhor Modelo: O projeto conclui que o XGBoost foi o modelo com melhor equilíbrio, apresentando um desempenho muito próximo ao do Random Forest (o de maior AUC de teste), mas com um tempo de treinamento consideravelmente menor, o que o torna mais prático.
-Overfitting: Houve sinais leves de overfitting em todos os modelos, com o Random Forest sendo o que menos sofreu em termos de generalização. O SVC apresentou um overfitting que foi um pouco inesperado comparado aos outros.
-Dificuldades no Pré-processamento: Os principais desafios incluíram garantir que o pipeline de pré-processamento não vazasse informações, lidar com o possível desbalanceamento do dataset, e a necessidade do escalonamento para o SVC. A divisão de 30% para teste também foi identificada como um fator que poderia aumentar a chance de overfitting, exigindo atenção extra nos ajustes.
-Em suma, o projeto demonstrou um pipeline completo de classificação supervisionada, desde o pré-processamento até a modelagem e avaliação, destacando a importância de comparar diferentes algoritmos e suas características.
